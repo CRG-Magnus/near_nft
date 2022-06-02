@@ -11,7 +11,14 @@ impl Contract {
         //we add an optional parameter for perpetual royalties
         perpetual_royalties: Option<HashMap<AccountId, u32>>,
     ) {
-        //measure the initial storage being used on the contract
+
+        // check sender account has minting permission @mbt
+        assert!(
+            self.minters.contains(&env::predecessor_account_id()),
+            "Sender has no minting permission"
+        );
+
+        // measure the initial storage being used on the contract
         let initial_storage_usage = env::storage_usage();
 
         // create a royalty map to store in the token

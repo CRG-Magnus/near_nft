@@ -11,6 +11,7 @@ use near_sdk::serde::{Deserialize, Serialize};
 #[non_exhaustive]
 pub enum EventLogVariant {
     NftMint(Vec<NftMintLog>),
+    NftBurn(Vec<NftBurnLog>),
     NftTransfer(Vec<NftTransferLog>),
 }
 
@@ -49,6 +50,21 @@ impl fmt::Display for EventLog {
 #[derive(Serialize, Deserialize, Debug)]
 #[serde(crate = "near_sdk::serde")]
 pub struct NftMintLog {
+    pub owner_id: String,
+    pub token_ids: Vec<String>,
+
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub memo: Option<String>,
+}
+
+// An event log to capture token burning
+// Arguments
+// * `owner_id`: owner of tokens to burn
+// * `token_ids`: ["1","abc"]
+// * `memo`: optional message
+#[derive(Serialize, Deserialize, Debug)]
+#[serde(crate = "near_sdk::serde")]
+pub struct NftBurnLog {
     pub owner_id: String,
     pub token_ids: Vec<String>,
 

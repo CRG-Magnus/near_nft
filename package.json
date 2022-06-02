@@ -1,10 +1,14 @@
 {
-    "name": "nft-tutorial",
-    "version": "1.0.0",
-    "description": "Zero to Hero NFT Tutorial",
+    "name": "nft-1",
+    "version": "2.0.0",
+    "description": "NFT items",
     "author": "Ben Kurrek",
     "license": "ISC",
     "scripts": {
-        "build": "cd nft-contract && bash build.sh && cd .. && ls && cd market-contract && bash build.sh && cd .."
+        "build": "cd nft-contract && bash build.sh && cd .."
+    },
+    "dependencies": {
+        "form-data": "^4.0.0",
+        "node-fetch": "^3.2.4"
     }
 }
