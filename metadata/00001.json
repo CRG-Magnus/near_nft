@@ -1,0 +1,36 @@
+{
+    "attributes": [
+      {
+        "trait_type": "Rarity",
+        "value": "Archetype"
+      },
+      {
+        "trait_type": "Season",
+        "value": "0 - Alphaville"
+      },
+      {
+        "trait_type": "Family",
+        "value": "Potency"
+      },
+      {
+        "trait_type": "Quality",
+        "value": "Unfulfilled"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Melee Singel Target"
+      },
+      {
+        "trait_type": "Condition",
+        "value": "Crumbling"
+      },
+      {
+        "trait_type": "Level",
+        "value": 88
+      },
+      {
+        "trait_type": "Item-link",
+        "value": "https://www.naramunz.com/"
+      }
+    ]
+  }
